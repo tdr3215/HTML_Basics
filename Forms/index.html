@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Demo</title>
+  </head>
+  <body>
+    <h1>Forms Demo</h1>
+    <form action="">
+      <label for="cheese">Do you like cheese?</label>
+      <input type="checkbox" name="cheese" id="cheese" />
+
+      <!-- the "for" attribute is connected to the "id" attribute in the input -->
+      <input type="text" placeholder="Type Here" />
+
+      <label for="username">Enter Username: </label>
+      <input type="text" name="username" id="username" />
+      <!-- name is going to show up in the query string -->
+      <!-- http://127.0.0.1:54418/?username=chickenmane -->
+
+      <label for="password">Enter a Password</label>
+      <input type="password" placeholder="Password" id="password" />
+      <input type="color" />
+      <input type="text" placeholder="Type Here" />
+      <button type="submit">Submit</button>
+      <input type="submit" />
+    </form>
+
+    <hr />
+
+    <h2>More Inputs</h2>
+    <form action="/birds">
+      <!-- Checkbox -->
+      <input type="checkbox" name="agree_tos" id="agree" checked />
+      <label for="agree">I agree to everything</label>
+
+      <!-- Radio -->
+
+      <!-- give them the same name to associate them with each other -->
+      <!-- add the value attribute to associate the radio buttons with a value-->
+      <p>
+        <label for="XS">XS: </label>
+        <input type="radio" name="size" id="XS" value="x-small" />
+
+        <label for="S">S: </label>
+        <input type="radio" name="size" id="S" value="small" />
+
+        <label for="M">M: </label>
+        <input type="radio" name="size" id="M" value="medium" />
+      </p>
+
+      <!-- Select -->
+      <p>
+        <label for="meal">Please Select an Entree</label>
+        <select name="meal" id="meal">
+          <option value="">--Please choose and option--</option>
+          <option value="fish">Fish</option>
+          <option value="veg">Vegetarian</option>
+          <option value="steak">Steak</option>
+        </select>
+      </p>
+      <button type="submit">submit</button>
+    </form>
+
+    <hr />
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+      <label for="first">Enter First Name:</label>
+      <input type="text" name="first" id="first" required />
+
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        minlength="5"
+        maxlength="10"
+      />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
